@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("https://media.istockphoto.com/id/1311934969/photo/contact-us.jpg?b=1&s=170667a&w=0&k=20&c=2sJEN1Hhg6heUi1ZxKs6pJDwcyLYXPc4pUGd3hEjOjE=");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      form {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #666;
+      }
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        font-size: 16px;
+        resize: vertical;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .but {
+        background-color: greenyellow;
+        width: 80px;
+        height: 30px;
+        border-radius: 15px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="bike">
+      <a href="index.html">
+        EASY E<span
+          ><img width="60px" height="60px" src="./assets/E bike.png" alt=""
+        /></span>
+        BIKEs
+      </a>
+    </h1>
+
+    <script>
+      function sendEmail() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const url = `mailto:sabisingh230@gmail.com?subject=New Contact Form Submission&body=Name: ${name}%0A%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
+
+        window.location.href = url;
+      }
+    </script>
+
+    <form>
+      <h1>Contact Us</h1>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" />
+
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+      />
+
+      <label for="message">Message:</label>
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Enter your message"
+      ></textarea>
+
+      <input class="but" type="button" value="Submit" onclick="sendEmail()" />
+    </form>
+  </body>
+</html>
