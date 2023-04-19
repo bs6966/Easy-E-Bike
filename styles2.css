@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Mina', sans-serif;
+}
+
+/* Body styles */
+body {
+  background-color: #f2f2f2;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 20px;
+}
+
+.navbar a:hover {
+  color: lightblue;
+}
+
+.navbar p {
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 2px solid transparent;
+  margin: 0 10px;
+}
+
+.navbar p:hover {
+  color: lightblue;
+  border-bottom: 2px solid #fff;
+}
+
+.b1 {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.b1:hover {
+  background-color: lightblue;
+  color: #2c3e50;
+}
+
+.b1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Content styles */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px auto;
+}
+
+.content h2 {
+  font-size: 60px;
+  font-family: 'Concert One', cursive;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.b2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c3e50;
+  color: lightblue;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.b2:hover {
+  background-color: lightblue;
+  color: #2c3e50;
+}
+
+.b2 img {
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.b2:hover img {
+  transform: translateX(10px);
+}
+
+/* Animations */
+.navbar {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.content h2 {
+  animation: fadeInUp 1s ease-in-out;
+}

@@ -14,9 +14,6 @@
       href="https://fonts.googleapis.com/css?family=Mina"
       rel="stylesheet"
     />
-
-
-    
   </head>
   <body>
     <div class="wrapper">
@@ -66,8 +63,32 @@
   <option value="srm-green-pearl">SRM Green Pearl</option>
 </select>
 
-      
-      
-     
+<div id="price"></div>
+<script>
+  function calculatePrice() {
+    // get the selected pickup and drop locations
+    const pickupLocation = document.getElementById("pickup-location").value;
+    const dropLocation = document.getElementById("drop-location").value;
+
+    // calculate the distance between the two locations (in kilometers)
+    const distance = 5; // replace with actual distance calculation
+
+    // set the price rate per kilometer
+    const pricePerKm = 10;
+
+    // calculate the total price
+    const totalPrice = distance * pricePerKm;
+
+    // display the total price on the page
+    const priceElement = document.getElementById("price");
+    priceElement.innerHTML = `Total Price: $${totalPrice}`;
+  }
+
+  // add event listeners to recalculate price whenever the pickup or drop location changes
+  const pickupSelect = document.getElementById("pickup-location");
+  pickupSelect.addEventListener("change", calculatePrice);
+  const dropSelect = document.getElementById("drop-location");
+  dropSelect.addEventListener("change", calculatePrice);
+</script>
   </body> 
 </html>

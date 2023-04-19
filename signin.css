@@ -1,77 +1,88 @@
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-
-}
-
-.container {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(black,gray);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-form {
-    background-color: transparent;
+  }
+  
+  body {
+    font-family: 'Mina', sans-serif;
+    background-color: #3d5873;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-    padding: 2vw 4vw;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-
-}
-
-form h2 {
-    color: black;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-form input, form textarea {
-    border: 0;
-    margin: 10px 0;
-    padding: 20px;
-    outline: none;
-    background: #f5f5f5;
-    font-size: 16px;
-
-}
-
-form button {
-    padding: 15px;
-    background: red;
-    color: white;
-    font-size: 18px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    width: 150px;
-    margin: 20px auto 0;
-    border-radius: 30px;
-
-}
-.product {
-    background-color: lightblue;
-    color: yellow;
-    display: flex;
-    align-items: top;
-    font-size: 30px;
-}
-
-.signin {
-    color: white;
-}
-
-.bike {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 57px;
-    background: black;
-    color: white;
   }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f8fa;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #7492b5;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7492b5;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3d5873;
+  }
+  
+  /* Header styles */
+  .bike a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .bike img {
+    margin-left: 10px;
+  }
+  
+  /* Sign in form styles */
+  .signin {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #3d5873;
+    text-shadow: 2px 2px 0 #7492b5;
+  }
+  
