@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get E-bike</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="location.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Concert One"
       rel="stylesheet"
@@ -31,64 +31,54 @@
         <a href=""><p>MAPS</p></a>
         <button class="b1">SIGN UP/LOGIN</button>
       </nav>
-      <label for="pickup-location">Pickup Location:</label>
-<select id="pickup-location" name="pickup-location">
-  <option value="potheri-market">Potheri Market</option>
-  <option value="akshaya">Akshaya</option>
-  <option value="main-campus">Main Campus</option>
-  <option value="tech-park">Tech-Park</option>
-  <option value="university-building">University Building</option>
-  <option value="abode-valley">Abode Valley</option>
-  <option value="potheri-station">Potheri Station</option>
-  <option value="aishwarya">Aishwarya</option>
-  <option value="estancia">Estancia</option>
-  <option value="java-green">Java Green</option>
-  <option value="srm-hospital">SRM Hospital</option>
-  <option value="srm-green-pearl">SRM Green Pearl</option>
-</select>
+      <div class="form-container">
+        <label class="label2" for="pickup-location">Pickup Location:</label>
+        <select class="select1" id="pickup-location" name="pickup-location">
+          <option value="potheri-market">Potheri Market</option>
+          <option value="akshaya">Akshaya</option>
+          <option value="main-campus">Main Campus</option>
+          <option value="tech-park">Tech-Park</option>
+          <option value="university-building">University Building</option>
+          <option value="abode-valley">Abode Valley</option>
+          <option value="potheri-station">Potheri Station</option>
+          <option value="aishwarya">Aishwarya</option>
+          <option value="estancia">Estancia</option>
+          <option value="java-green">Java Green</option>
+          <option value="srm-hospital">SRM Hospital</option>
+          <option value="srm-green-pearl">SRM Green Pearl</option>
+        </select>
 
-<label for="drop-location">Drop Location:</label>
-<select id="drop-location" name="drop-location">
-  <option value="potheri-market">Potheri Market</option>
-  <option value="akshaya">Akshaya</option>
-  <option value="main-campus">Main Campus</option>
-  <option value="tech-park">Tech-Park</option>
-  <option value="university-building">University Building</option>
-  <option value="abode-valley">Abode Valley</option>
-  <option value="potheri-station">Potheri Station</option>
-  <option value="aishwarya">Aishwarya</option>
-  <option value="estancia">Estancia</option>
-  <option value="java-green">Java Green</option>
-  <option value="srm-hospital">SRM Hospital</option>
-  <option value="srm-green-pearl">SRM Green Pearl</option>
-</select>
+        <label class="label2" for="drop-location">Drop Location:</label>
+        <select class="select2" id="drop-location" name="drop-location">
+          <option value="potheri-market">Potheri Market</option>
+          <option value="akshaya">Akshaya</option>
+          <option value="main-campus">Main Campus</option>
+          <option value="tech-park">Tech-Park</option>
+          <option value="university-building">University Building</option>
+          <option value="abode-valley">Abode Valley</option>
+          <option value="potheri-station">Potheri Station</option>
+          <option value="aishwarya">Aishwarya</option>
+          <option value="estancia">Estancia</option>
+          <option value="java-green">Java Green</option>
+          <option value="srm-hospital">SRM Hospital</option>
+          <option value="srm-green-pearl">SRM Green Pearl</option>
+        </select>
+<button class="button2" onclick="calculatePrice()">Calculate Price</button>
+<p id="price"></p>
 
-<div id="price"></div>
+<button class="button1"><a href="booking.html">Book E-Bike</a></button>
 <script>
   function calculatePrice() {
-    // get the selected pickup and drop locations
-    const pickupLocation = document.getElementById("pickup-location").value;
-    const dropLocation = document.getElementById("drop-location").value;
+    var pickupLocation = document.getElementById("pickup-location").value;
+    var dropLocation = document.getElementById("drop-location").value;
 
-    // calculate the distance between the two locations (in kilometers)
-    const distance = 5; // replace with actual distance calculation
+    // Calculate the fare based on the distance between pickup and drop locations
+    // You can replace this calculation with your own fare calculation algorithm
+    var fare = Math.abs(dropLocation.charCodeAt(0) - pickupLocation.charCodeAt(0)) * 6;
 
-    // set the price rate per kilometer
-    const pricePerKm = 10;
-
-    // calculate the total price
-    const totalPrice = distance * pricePerKm;
-
-    // display the total price on the page
-    const priceElement = document.getElementById("price");
-    priceElement.innerHTML = `Total Price: $${totalPrice}`;
+    document.getElementById("price").innerHTML = "Price: "+ fare+"₹";
   }
-
-  // add event listeners to recalculate price whenever the pickup or drop location changes
-  const pickupSelect = document.getElementById("pickup-location");
-  pickupSelect.addEventListener("change", calculatePrice);
-  const dropSelect = document.getElementById("drop-location");
-  dropSelect.addEventListener("change", calculatePrice);
 </script>
+
   </body> 
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment getway</title>
+    <link rel="stylesheet" type="text/css" href="booking.css" />
+    <link rel="stylesheet" href="booking.js" />
+    <style>
+      /* Style for thank you message */
+      #thank-you {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        border: 2px solid #000;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="payment-container">
+          <h3>BILLING ADDRESS</h3>
+          <form>
+            Full name
+            <input type="text" name="" placeholder="Enter name" />
+            Email
+            <input type="text" name="" placeholder="Enter email" />
+
+            Address
+            <input type="text" name="" placeholder="Enter address" />
+
+            City
+            <input type="text" name="" placeholder="Enter City" />
+          </form>
+        </div>
+        <div class="right">
+          <h3>PAYMENT</h3>
+          <form id="payment-form">
+            Accepted Card <br />
+            <img src="assets/card1.png" width="100" />
+
+            <br /><br />
+
+            Credit card number
+            <input type="text" name="" placeholder="Enter card number" />
+
+            Exp month
+            <input type="text" name="" placeholder="Enter Month" />
+            <div id="zip">
+              <label>
+                Exp year
+                <select>
+                  <option>Choose Year..</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                  <option>2027</option>
+                  <option>2028</option>
+                  <option>2029</option>
+                </select>
+              </label>
+              <label>
+                CVV
+                <input type="number" name="" placeholder="CVV" />
+              </label>
+            </div>
+            <button type="submit" id="pay-btn">Pay Now</button>
+          </form>
+          <div id="thank-you">
+            <h2>Thank You!</h2>
+            <p>Your payment has been processed.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="booking.js"></script>
+    <script>
+      const paymentForm = document.getElementById("payment-form");
+      const thankYou = document.getElementById("thank-you");
+
+      paymentForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        message.style.display = "block";
+        paymentForm.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
