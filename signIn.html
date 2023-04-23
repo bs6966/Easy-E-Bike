@@ -8,6 +8,15 @@
     <title>Sign in</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <style>
+    .signin {
+      color: white;
+    }
+
+    .bike {
+      color: #2c3e50;
+    }
+  </style>
   <body>
     <h1 class="bike">
       <a href="index.html">
@@ -19,20 +28,40 @@
     </h1>
     <div class="container">
       <form
+        method="post"
         onsubmit="alert('Successful, You are registered')"
         action="index.html"
       >
         <h2 class="signin">Sign In</h2>
-        <input type="text" id="name" placeholder="Name" required />
-        <input type="email" id="email" placeholder="Email ID" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <input type="text" id="phone" placeholder="Phone no." optional />
+        <input name="name" type="text" id="name" placeholder="Name" required />
+        <input
+          name="Email"
+          type="email"
+          id="email"
+          placeholder="Email ID"
+          required
+        />
+        <input
+          name="password"
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <input
+          name="Phone"
+          type="text"
+          id="phone"
+          placeholder="Phone no."
+          optional
+        />
         <textarea
           id="message"
+          name="Reg"
           rows="1"
           placeholder="Register Number"
         ></textarea>
-        <button type="submit">Submit</button>
+        <button name="submit" type="submit">Submit</button>
       </form>
     </div>
   </body>

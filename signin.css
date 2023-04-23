@@ -1,88 +1,98 @@
 /* Global styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: url("https://img.freepik.com/premium-vector/dark-stripes-background-elegant-design-wallpapers_518299-1505.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Header styles */
+.bike {
+  display: block;
+  margin: 30px auto 50px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.bike img {
+  vertical-align: middle;
+  margin-bottom: -10px;
+}
+
+/* Container styles */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: transparent;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 60);
+  border-radius: 10px;
+  padding: 30px;
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
   }
-  
-  body {
-    font-family: 'Mina', sans-serif;
-    background-color: #3d5873;
-    color: #333;
-    font-size: 16px;
+  to {
+    transform: translateY(0);
   }
-  
-  .container {
-    width: 90%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #f5f8fa;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="password"]:focus,
-  textarea:focus {
-    outline: none;
-    box-shadow: 0 0 5px #7492b5;
-  }
-  
-  button[type="submit"] {
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #7492b5;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #3d5873;
-  }
-  
-  /* Header styles */
-  .bike a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  .bike img {
-    margin-left: 10px;
-  }
-  
-  /* Sign in form styles */
-  .signin {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 36px;
-    font-weight: bold;
-    color: #3d5873;
-    text-shadow: 2px 2px 0 #7492b5;
-  }
-  
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  border: none;
+  border-bottom: 1px solid transparent;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+button[type="submit"] {
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Sign-in heading styles */
+.signin {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}

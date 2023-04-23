@@ -12,8 +12,9 @@
   
   /* Set background color and text color */
   body {
-    background-color: #0d3c59;
-    color: #333;
+    background: url("https://img.freepik.com/premium-vector/dark-stripes-background-elegant-design-wallpapers_518299-1505.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   /* Set the width of the wrapper */
@@ -26,7 +27,7 @@
   /* Add styles to the main heading */
   .bike a {
     text-decoration: none;
-    color: #fff;
+    color: white;
     display: flex;
     align-items: center;
   }
@@ -46,28 +47,29 @@
   
   /* Add styles to the content section */
   .contentOne {
+    height: fit-content;
     margin-top: 40px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5;
-    background-color: #fff;
+    color: white;
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 60);
   }
   
   .contentOne h1 {
     font-size: 60px;
     font-family: 'Concert One', cursive;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
   
   .contentOne a {
-    color: #007bff;
+    color: white;
   }
   
   /* Add styles to the paragraphs */
   .contentOne p {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
   
   /* Add styles to the last paragraph */

@@ -6,23 +6,24 @@
 }
 
 body {
-  background-color: #0d3c59;
+  background: url("https://img.freepik.com/premium-vector/dark-stripes-background-elegant-design-wallpapers_518299-1505.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
   font-size: 3rem;
   text-align: center;
   margin: 3rem 0;
-  color: #0d3c59;
+  color: white;
 }
 
 form {
   max-width: 500px;
   margin: 0 auto;
-  background-color: #fff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 60);
   animation: slide-in 0.5s ease-in-out;
 }
 
@@ -34,7 +35,7 @@ textarea {
   border-radius: 5px;
   border: none;
   background-color: #f2f2f2;
-  color: #333;
+  color: white;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 1px;
@@ -43,13 +44,13 @@ textarea {
 label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #0d3c59;
+  color: white;
   font-weight: 500;
   letter-spacing: 1px;
 }
 
 input[type="button"] {
-  background-color: #0d3c59;
+  background-color: red;
   color: #fff;
   border: none;
   border-radius: 5px;
