@@ -16,6 +16,14 @@
     .bike {
       color: #2c3e50;
     }
+
+    .alert {
+      color: white;
+      font-size: 40px;
+      text-align: center;
+      font-weight: 900;
+      display: none;
+    }
   </style>
   <body>
     <h1 class="bike">
@@ -27,10 +35,8 @@
       </a>
     </h1>
     <div class="container">
-      <form
-        onsubmit="alert('Successful, You are registered')"
-        action="location.html"
-      >
+      <form alert="Signed in Sucessfully" action="location.html" id="form">
+        <div class="alert">Signed In Sucessfully!</div>
         <h2 class="signin">Sign In</h2>
         <input name="name" type="text" id="name" placeholder="Name" required />
         <input
@@ -63,5 +69,7 @@
         <button name="submit" type="submit">Submit</button>
       </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="mail.js"></script>
   </body>
 </html>
